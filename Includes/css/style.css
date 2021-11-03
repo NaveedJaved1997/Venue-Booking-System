@@ -1,0 +1,134 @@
+/* fixing fotter */
+/* body { padding-bottom: 1px; } */
+
+.logo{
+	width: 48px;
+	height: 48px;
+	border-radius: 15px;
+}
+/* Header Section */
+.intro {
+	display: table;
+	width: 100%;
+	padding: 0;
+	background: url(../Media/intro-bg.jpg) no-repeat center center;
+	background-color: #e5e5e5;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+}
+.intro .overlay {
+	background: rgba(0,0,0,0.4);
+}
+.intro h1 {
+	font-family: 'Dancing Script', cursive;
+	color: #fff;
+	font-size: 10em;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+.intro span {
+	color: #a7c44c;
+	font-weight: 600;
+}
+.intro p {
+	color: #fff;
+	font-size: 32px;
+	font-weight: 300;
+	margin-top: 10px;
+	margin-bottom: 40px;
+}
+header .intro-text {
+	padding-top: 250px;
+	padding-bottom: 200px;
+	text-align: center;
+}
+
+
+/* venues list */
+.venues-head{
+	text-align: center;
+	padding: 25px;
+	font-family: Old Standard TT;
+	font-size:45px;
+}
+.bg-venues{
+	background-color: #dedbd3;
+}
+.bg-venues-card{
+	background-color: #B9B2A0;
+	color: #46433B;
+}
+.contact-container{
+	font-family: Courier, Old Standard TT;
+	font-size:20px;
+}
+.page-height{
+	min-height: 80vh;
+}
+.btn-outline-white{
+	border: 2px solid white;
+	border-radius: 5px;
+	color: white;
+}
+.btn-outline-white:hover{
+	border: 2px solid white;
+	background-color: white;
+	color:black
+}
+.footer-register{
+	background-color: #2e3439 ;
+}
+
+.content_center {
+	position: relative;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  
+/* rating system */
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+/* body { */
+  /* display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #ffe400; */
+/* } */
+.rating-css {
+	height: auto;
+  /* height: 250px;
+  width: 400px; */
+  /* background: #101012; */
+  /* border: 4px solid #838383; */
+  /* padding: 20px; */
+}
+.rating-css div {
+  color: #ff9f00;
+  /* font-size: 30px; */
+  /* font-family: sans-serif; */
+  /* font-weight: 800; */
+  text-align: center;
+  /* text-transform: uppercase;
+  padding: 20px 0; */
+}
+.rating-css input {
+  display: none;
+}
+.rating-css input + label {
+  font-size: 40px;
+  text-shadow: 1px 1px 0 #ffe400;
+  cursor: pointer;
+}
+.rating-css input:checked + label ~ label {
+  color: #838383;
+}
+.rating-css label:active {
+  transform: scale(0.8);
+  transition: 0.3s ease;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Includes/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Includes/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Includes/css/style.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+        <!-- Add Venue Modal -->
+        <div class="modal fade" id="AddVenueMondal" tabindex="-1" role="dialog" aria-labelledby="AddVenueMondalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="AddVenueMondalLabel">Add A New Venue</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form action="#" method="post">
+                      <label for="venue-name">Venue Name</label>
+                      <input class="form-control" type="text" id="venue-name" name="venue-name" required>
+                      <label for="venue-address">Venue Address</label>
+                      <input class="form-control" type="text" id="venue-address" name="venue-address" required>
+                      <label for="venue-stime">Venue Time</label>
+                      <input class="form-control" type="time" id="venue-stime" name="venue-stime" required>
+                      <label for="venue-etime">Venue Time</label>
+                      <input class="form-control" type="time" id="venue-etime" name="venue-etime" required>
+                </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success" data-dismiss="modal">Add</button>
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    <!-- nav -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <a class="navbar-brand" href="#">OVBS</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false" style="list-style: none;">Admin</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+  <!-- new -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="nav flex-column nav-pills col-2 " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Dashboard</a>
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Manage Venues</a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Manage Cars</a>
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Manage Users</a>
+          </div>
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <!-- Manage Venues -->
+                <!-- show venue -->
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="col"> -->
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <a class="text-white" href="" data-toggle="modal" data-target="#AddVenueMondal">[Add New Venue]</a>
+                    </div>
+                    <!-- <div class="card-body"> -->
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Sr#</th>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <th>Time</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Taj Mahal</td>
+                                    <td>abc road, near g point</td>
+                                    <td>12:00PM - 03:00PM</td>
+                                    <th>
+                                        <a href="">Edit</a>
+                                        <a href="">Delete</a>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>A+ Marque</td>
+                                    <td>abc road, near g point</td>
+                                    <td>04:00PM - 07:00PM</td>
+                                    <th>
+                                        <a href="">Edit</a>
+                                        <a href="">Delete</a>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Sultan Grand</td>
+                                    <td>abc road, near g point</td>
+                                    <td>08:00PM - 11:00PM</td>
+                                    <th>
+                                        <a href="">Edit</a>
+                                        <a href="">Delete</a>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    <!-- </div> -->
+                </div>          
+            <!-- </div>
+        </div>
+    </div> -->
+            </div>
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                <h1>Some Data Here</h1>
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                <h1>Some Data Here</h1>
+            </div>
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                <h1>Some Data Here</h1>
+            </div>
+          </div>
+    </div>
+</div>
+
+
+
+
+    <script src="../Includes/jquery/jquery.min.js"></script> 
+    <script src="../Includes/bootstrap/js/bootstrap.min.js"></script>   
+</body>
+</html>
